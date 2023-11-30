@@ -13,3 +13,16 @@ nums.push(29);
 var mixed = ['Ken', 4, 'abc', 10];
 mixed.push('hello');
 mixed.push(18);
+//objects
+var person = {
+    firstName: 'Dinuja',
+    lastName: 'Pinto',
+    age: 20
+};
+person.age = 22;
+person.lastName = 'sri';
+person = {
+    firstName: 'Dinuja',
+    lastName: 'Pinto',
+    age: 20
+};
