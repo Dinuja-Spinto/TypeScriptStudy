@@ -14,4 +14,4 @@ function performAction(event:Event){
     let liTag = document.createElement("li");
     liTag.innerHTML = val; 
     document.querySelector(".list")?.appendChild(liTag);
-  }
+}
