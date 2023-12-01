@@ -26,3 +26,20 @@ person = {
     lastName: 'Pinto',
     age: 20
 };
+var ninjas = [];
+ninjas.push('abs');
+//union types
+var mix = [];
+mix.push(10);
+mix.push('hello');
+mix.push(false);
+console.log(mix);
+var uid;
+uid = 123;
+uid = 'abc';
+//objects
+var ninjaOne;
+ninjaOne = { name: 'yoshi', age: 30 };
+var ninjaTwo;
+ninjaTwo = { name: 'dinuja', age: 12, beltColor: 'black' };
+ninjaTwo = { name: 'dinujaS', age: 122, beltColor: 'darkblack' };
