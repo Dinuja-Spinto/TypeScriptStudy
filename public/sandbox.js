@@ -70,6 +70,14 @@ greet = () => {
 greet();
 const add = (a, b, c = 10) => {
     console.log(a + b);
-    console.log(c);
+    console.log(a + ' hello');
 };
 add(2, 5, 'hey');
+const logDetails = (uid, item) => {
+    console.log(`${item} has a Uid of ${uid}`);
+};
+const gree = (user) => {
+    console.log(`${user.name} says hello`);
+};
+logDetails(123, 'watch');
+gree({ name: 'pinto', uid: 456 });

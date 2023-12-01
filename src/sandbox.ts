@@ -94,7 +94,19 @@ greet();
 
 const add = (a: number, b: number, c: number | string = 10) => {
     console.log(a + b);
-    console.log(c)
+    console.log(a + ' hello')
 }
 
 add(2, 5, 'hey');
+
+//typeAlias
+type stringOrNum = string | number;
+type objectwithName = { name: string, uid: stringOrNum };
+const logDetails = (uid: stringOrNum, item: string) => {
+    console.log(`${item} has a Uid of ${uid}`)
+}
+const gree = (user: objectwithName) => {
+    console.log(`${user.name} says hello`)
+}
+logDetails(123, 'watch');
+gree({ name: 'pinto', uid: 456 });
