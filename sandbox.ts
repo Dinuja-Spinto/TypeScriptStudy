@@ -60,5 +60,26 @@ let ninjaTwo: {
     age: number,
     beltColor: string
 }
-ninjaTwo = {name:'dinuja',age: 12, beltColor:'black'}
-ninjaTwo = {name:'dinujaS',age: 122, beltColor:'darkblack'}
+ninjaTwo = { name: 'dinuja', age: 12, beltColor: 'black' }
+ninjaTwo = { name: 'dinujaS', age: 122, beltColor: 'darkblack' }
+
+//dunamic(any) type
+let age: any = 25;
+console.log(age);
+age = true;
+console.log(age);
+age = 'hello';
+console.log(age);
+age = { name: 'hello', year: 2023 }
+let mixture: any[] = [];
+mixture.push(true);
+mixture.push('hello');
+mixture.push(23);
+console.log(mixture);
+
+let ninja: { name: any, age: any }
+ninja = {name:'pinto', age:12}
+console.log(ninja)
+
+ninja = {name:12, age:'dinuja'}
+console.log(ninja)
