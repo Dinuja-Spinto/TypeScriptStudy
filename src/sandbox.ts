@@ -78,8 +78,23 @@ mixture.push(23);
 console.log(mixture);
 
 let ninja: { name: any, age: any }
-ninja = {name:'pinto', age:12}
+ninja = { name: 'pinto', age: 12 }
 console.log(ninja)
 
-ninja = {name:12, age:'dinuja'}
+ninja = { name: 12, age: 'dinuja' }
 console.log(ninja)
+
+//functions
+let greet: Function;
+greet = () => {
+    console.log('hello,again');
+}
+
+greet();
+
+const add = (a: number, b: number, c: number | string = 10) => {
+    console.log(a + b);
+    console.log(c)
+}
+
+add(2, 5, 'hey');
