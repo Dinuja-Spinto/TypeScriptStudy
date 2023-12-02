@@ -81,3 +81,21 @@ const gree = (user) => {
 };
 logDetails(123, 'watch');
 gree({ name: 'pinto', uid: 456 });
+//function signature
+let greets;
+greets = (name, greeting) => {
+    console.log(`${name} says ${greeting}`);
+};
+let calc;
+calc = (num1, num2, action) => {
+    if (action == 'add') {
+        return num1 + num2;
+    }
+    else {
+        return num1 - num2;
+    }
+};
+let logDetail;
+logDetail = (ninja) => {
+    console.log(`${ninja.name} is ${age} years old.`);
+};

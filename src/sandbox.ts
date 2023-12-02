@@ -110,3 +110,23 @@ const gree = (user: objectwithName) => {
 }
 logDetails(123, 'watch');
 gree({ name: 'pinto', uid: 456 });
+
+//function signature
+let greets: (a: string, b: string) => void;
+greets = (name: string, greeting: string) => {
+    console.log(`${name} says ${greeting}`);
+}
+
+let calc: (a: number, b: number, c: string) => number;
+calc = (num1: number, num2: number, action: string) => {
+    if (action == 'add') {
+        return num1 + num2;
+    } else {
+        return num1 - num2;
+    }
+}
+
+let logDetail: (obj: { name: string, age: number }) => void;
+logDetail = (ninja: { name: string, age: number }) => {
+    console.log(`${ninja.name} is ${age} years old.`);
+}
