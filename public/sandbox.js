@@ -1,4 +1,4 @@
-"use strict";
+import { Invoice } from './classes/Invoice.js';
 let character = 'Dinuja';
 let num = 10;
 character = 'Pinto';
@@ -100,24 +100,24 @@ logDetail = (ninja) => {
     console.log(`${ninja.name} is ${age} years old.`);
 };
 //classes
-class Invoice {
-    // readonly client: string;
-    // private details: string;
-    // public amount: number;
-    // constructor(c: string, d: string, a: number) {
-    //     this.client = c;
-    //     this.details = d;
-    //     this.amount = a;
-    // }
-    constructor(client, details, amount) {
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-    }
-    format() {
-        return `${this.client} owes $${this.amount} for ${this.details}`;
-    }
-}
+// class Invoice {
+//     // readonly client: string;
+//     // private details: string;
+//     // public amount: number;
+//     // constructor(c: string, d: string, a: number) {
+//     //     this.client = c;
+//     //     this.details = d;
+//     //     this.amount = a;
+//     // }
+//     constructor(
+//         readonly client: string,
+//         private details: string,
+//         public amount: number
+//     ) { }
+//     format() {
+//         return `${this.client} owes $${this.amount} for ${this.details}`;
+//     }
+// }
 const invOne = new Invoice('mario', 'mario website', 200);
 const invTwo = new Invoice('Dinuja', 'dinuja website', 300);
 let invoices = [];

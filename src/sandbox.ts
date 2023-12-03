@@ -1,3 +1,4 @@
+import { Invoice } from './classes/Invoice.js';
 let character = 'Dinuja';
 let num = 10;
 
@@ -132,27 +133,27 @@ logDetail = (ninja: { name: string, age: number }) => {
 }
 
 //classes
-class Invoice {
-    // readonly client: string;
-    // private details: string;
-    // public amount: number;
+// class Invoice {
+//     // readonly client: string;
+//     // private details: string;
+//     // public amount: number;
 
-    // constructor(c: string, d: string, a: number) {
-    //     this.client = c;
-    //     this.details = d;
-    //     this.amount = a;
-    // }
+//     // constructor(c: string, d: string, a: number) {
+//     //     this.client = c;
+//     //     this.details = d;
+//     //     this.amount = a;
+//     // }
 
-    constructor(
-        readonly client: string,
-        private details: string,
-        public amount: number
-    ) { }
+//     constructor(
+//         readonly client: string,
+//         private details: string,
+//         public amount: number
+//     ) { }
 
-    format() {
-        return `${this.client} owes $${this.amount} for ${this.details}`;
-    }
-}
+//     format() {
+//         return `${this.client} owes $${this.amount} for ${this.details}`;
+//     }
+// }
 
 const invOne = new Invoice('mario', 'mario website', 200);
 const invTwo = new Invoice('Dinuja', 'dinuja website', 300);
