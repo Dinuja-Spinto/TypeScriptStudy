@@ -130,3 +130,32 @@ let logDetail: (obj: { name: string, age: number }) => void;
 logDetail = (ninja: { name: string, age: number }) => {
     console.log(`${ninja.name} is ${age} years old.`);
 }
+
+//classes
+class Invoice {
+    client: string;
+    details: string;
+    amount: number;
+
+    constructor(c: string, d: string, a: number) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+
+    format() {
+        return `${this.client} owes $${this.amount} for ${this.details}`;
+    }
+}
+
+const invOne = new Invoice('mario', 'mario website', 200);
+const invTwo = new Invoice('Dinuja', 'dinuja website', 300);
+
+let invoices: Invoice[] = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+
+invOne.client = 'pinto';
+invTwo.amount = 123;
+
+console.log(invoices);
