@@ -1,4 +1,5 @@
 import { Invoice } from './classes/Invoice.js';
+import { Payment } from './classes/Payment.js';
 let character = 'Dinuja';
 let num = 10;
 character = 'Pinto';
@@ -135,5 +136,20 @@ const details = document.querySelector('#details');
 const amount = document.querySelector('#amount');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(type.value, toForm.value, details.value, amount.valueAsNumber);
+    let doc;
+    if (type.value === 'invoice') {
+        doc = new Invoice(toForm.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(toForm.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
 });
+let docOne;
+let docTwo;
+docOne = new Invoice('Dinuja', 'web work', 250);
+docTwo = new Payment('pinto', 'pumbling work', 200);
+let docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+console.log(docs);

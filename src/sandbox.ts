@@ -1,4 +1,6 @@
 import { Invoice } from './classes/Invoice.js';
+import { HasFormatter } from './interfaces/HasFormatter.js';
+import { Payment } from './classes/Payment.js';
 let character = 'Dinuja';
 let num = 10;
 
@@ -178,10 +180,23 @@ const amount = document.querySelector('#amount') as HTMLInputElement;
 
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
-    console.log(
-        type.value,
-        toForm.value,
-        details.value,
-        amount.valueAsNumber
-    );
+    let doc:HasFormatter;
+    if(type.value === 'invoice'){
+        doc = new Invoice(toForm.value, details.value, amount.valueAsNumber);
+    }else{
+        doc = new Payment(toForm.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
 })
+
+let docOne:HasFormatter;
+let docTwo:HasFormatter;
+
+docOne = new Invoice('Dinuja','web work',250);
+docTwo = new Payment('pinto','pumbling work',200);
+
+let docs: HasFormatter[]=[];
+docs.push(docOne);
+docs.push(docTwo);
+
+console.log(docs);
