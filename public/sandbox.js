@@ -136,3 +136,22 @@ let docs = [];
 docs.push(docOne);
 docs.push(docTwo);
 console.log(docs);
+//genrics
+const addUid = (obj) => {
+    let Uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { Uid });
+};
+let docuid = addUid({ name: 'Dinuja', age: 18 });
+console.log(docuid.age);
+console.log(docuid);
+const doca1 = {
+    uid: 2,
+    resourceName: 'Dinuja',
+    data: { lastName: 'pinto' }
+};
+const doca2 = {
+    uid: 3,
+    resourceName: 'testGeneric',
+    data: ['bread', 'milk']
+};
+console.log(doca1, doca2);

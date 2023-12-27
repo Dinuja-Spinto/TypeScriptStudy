@@ -183,3 +183,34 @@ docs.push(docOne);
 docs.push(docTwo);
 
 console.log(docs);
+
+//genrics
+const addUid =<T extends {name:string}> (obj:T)=>{
+    let Uid = Math.floor(Math.random() * 100);
+    return {...obj,Uid};
+}
+let docuid = addUid({name:'Dinuja', age:18});
+
+console.log(docuid.age);
+console.log(docuid);
+
+//generics with interfaces
+interface Resource<T>{
+    uid:number;
+    resourceName:string;
+    data:T;
+}
+
+const doca1:Resource<object> ={
+    uid:2,
+    resourceName:'Dinuja',
+    data:{lastName:'pinto'}
+} 
+
+const doca2:Resource<string[]>={
+    uid:3,
+    resourceName:'testGeneric',
+    data:['bread','milk']
+}
+
+console.log(doca1,doca2);
