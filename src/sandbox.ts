@@ -194,22 +194,25 @@ let docuid = addUid({name:'Dinuja', age:18});
 console.log(docuid.age);
 console.log(docuid);
 
+//ENUMS
+enum ResourceType{BOOK,PERSON,FILM,AUTHOR}
+
 //generics with interfaces
 interface Resource<T>{
     uid:number;
-    resourceName:string;
+    resourceName:ResourceType;
     data:T;
 }
 
 const doca1:Resource<object> ={
     uid:2,
-    resourceName:'Dinuja',
+    resourceName:ResourceType.AUTHOR,
     data:{lastName:'pinto'}
 } 
 
 const doca2:Resource<string[]>={
     uid:3,
-    resourceName:'testGeneric',
+    resourceName:ResourceType.BOOK,
     data:['bread','milk']
 }
 
